@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "papers-finder"
+version = "0.1.0"
+description = ""
+authors = ["Sannidhi-G <sannidhi2001smg@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "papers_finder", from = "src" }]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+typer = {extras = ["all"], version = "^0.12.3"}
+requests = "^2.32.4"
+
+[tool.poetry.scripts]
+get-papers-list = "papers_finder.cli:app"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

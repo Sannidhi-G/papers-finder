@@ -1,6 +1,6 @@
 from typer import Typer, Option
 from typing import Optional
-from papers_finder.api import fetch_pubmed_ids, fetch_paper_details
+from papers_finder.api import extract_corresponding_email, fetch_pubmed_ids, fetch_paper_details
 from papers_finder.clean_filters import filter_non_academic_authors
 
 from papers_finder.csv_writer import write_papers_to_csv
